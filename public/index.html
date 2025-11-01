@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="LetsNotify is a push notification platform that enables websites and applications to engage users through instant web alerts. Our service allows businesses to send personalized, segmented, and scheduled notifications for marketing, updates, and alerts."
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+      async
+      defer
+    ></script>
+
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>Lets Notify</title>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <script src="./versionControl.js"></script>
+    <script
+      type="text/javascript"
+      src="https://letsnotify.pages.dev/index.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn-staging.letsnotify.in//index.js"
+    ></script>
+  </head>
+
+  <body>
+    <script>
+      const sdk = new LetsNotifySDK();
+      const pushSDK = sdk.pushSdk();
+      pushSDK.init({
+        connectionId: '222a180d-7d76-4447-be0b-db131fa615c1',
+        serviceWorkerPath: 'LetsNotifySW.js',
+        apiKey: '1b93e9cde565653cb82094ad96053c86',
+        secretKey:
+          '2612e6039846680a3c1e736c27bd200c36e3492dc5d999cf37f60dd58f91936d',
+      });
+    </script>
+  </body>
+</html>

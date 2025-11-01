@@ -1,0 +1,120 @@
+export const submitButton = {
+  position: 'absolute',
+  bottom: '1%',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  gap: '40px',
+  width: '95%',
+  padding: '2rem',
+  borderTop: '1px solid gray',
+};
+
+export const CampaignStyle = {
+  container: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'end',
+    zIndex: '10',
+    height: '100vh',
+    width: '100vw',
+    position: 'absolute',
+    right: 0,
+    bgcolor: 'rgba(0,0,0,0.5)',
+    top: 0,
+    overflow: 'hidden',
+    paddingRight: '30px',
+  },
+  topBar: {
+    width: '100%',
+    display: 'flex',
+    justifyContent: 'space-between',
+    marginBottom: '2%',
+  },
+  createDiv: {
+    position: 'relative',
+    width: '100%',
+    // height: "95%",
+    // display: "flex",
+    flexDirection: 'column',
+    alignItems: 'center',
+    // justifyContent: "center",
+    borderRadius: '10px',
+    width: '100%',
+  },
+  searchBox: {
+    width: '100%',
+    display: 'flex',
+    gap: '10px',
+    alignItems: 'center',
+  },
+  formContainer: {
+    position: 'relative',
+    width: '100%',
+    // height: "80%",
+    // backgroundColor : "red",
+    paddingTop: 2,
+    display: 'flex',
+    flexDirection: 'column',
+    // alignItems: "center",
+    gap: '15px',
+    overflowY: 'auto',
+    overflowX: 'hidden',
+  },
+  togglebutton: {
+    width: '100%',
+    display: 'flex',
+    paddingLeft: '10px',
+    alignItems: 'center',
+    justifyContent: 'start',
+    gap: '20px',
+  },
+  inputField: {
+    height: '30px',
+    outline: '2px solid #058270',
+    boxShadow: '0px 0px 5px 0px rgba(0,0,0,0.1)',
+    borderRadius: '3px',
+    padding: '5px',
+  },
+  modalHeadingText: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  selectInputFlex: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  radioButtons: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    gap: '10px',
+    border: '2px solid green',
+  },
+  autoSelectStyle: {
+    width: '100%',
+    '& .MuiOutlinedInput-root': {
+      '& fieldset': {
+        borderColor: 'black',
+      },
+      '&:hover fieldset': {
+        borderColor: 'black',
+      },
+      '&.Mui-focused fieldset': {
+        borderColor: 'black',
+      },
+      color: 'black',
+    },
+    '& .MuiInputLabel-root': {
+      color: 'black',
+      '&.Mui-focused': {
+        color: 'black',
+      },
+    },
+    '& .MuiAutocomplete-option': {
+      color: 'black',
+    },
+  },
+};

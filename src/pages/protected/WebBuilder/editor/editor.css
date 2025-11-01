@@ -1,0 +1,125 @@
+:root {
+    --primary-color: #07826F;
+    --primary-hover: #056a5a;
+    --secondary-color: #35cfb8;
+    --bg-color: #f0f2f5;
+    --text-color: #2c2c2c;
+    --border-color: #e0e0e0;
+    --panel-bg: #ffffff;
+    --transition-speed: 0.3s;
+  }
+  
+  /* Base Styles */
+  .gjs-pn-panel {
+    height: auto;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-weight: bold;
+    font-size: larger;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    border-bottom: 1px solid var(--border-color);
+    will-change: transform, opacity;
+  }
+  
+  /* Buttons & Interactive Elements */
+  .gjs-pn-btn {
+    width: fit-content;
+    color: var(--text-color);
+    transition: all var(--transition-speed) ease;
+    will-change: transform, background-color;
+  }
+  
+  .gjs-pn-btn:hover {
+    color: var(--primary-color);
+    transform: translateY(-1px);
+  }
+  
+  .gjs-pn-btn.gjs-pn-active {
+    color: var(--primary-color);
+    position: relative;
+  }
+  
+  .gjs-pn-btn.gjs-pn-active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 2px;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+  }
+  
+  /* Device Dropdown */
+  .gjs-select #gjs-input-holder .gjs-devices {
+    border-radius: 20px;
+    color: var(--primary-color);
+    width: max-content;
+    transition: all var(--transition-speed) ease;
+  }
+  
+  .gjs-select #gjs-input-holder .gjs-devices option {
+    padding: 10px;
+    background: var(--panel-bg);
+    color: var(--primary-color);
+    height: 25px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-weight: 500;
+  }
+  
+  /* Blocks & Categories */
+  .gjs-block.gjs-one-bg.gjs-four-color-h {
+    transition: all var(--transition-speed) ease;
+    will-change: transform, box-shadow, background-color;
+  }
+  
+  .gjs-block.gjs-one-bg.gjs-four-color-h:hover {
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
+  }
+  
+  .gjs-blocks-category {
+    background-color: var(--panel-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    margin-bottom: 8px;
+    overflow: hidden;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    #gjs .gjs-cv-canvas {
+      width: 100%;
+    }
+    
+    .gjs-pn-panel {
+      padding: 0.5rem;
+    }
+  }
+  
+  /* Performance Optimizations */
+  .gjs-layer,
+  .gjs-sm-sector {
+    will-change: transform, opacity;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+  }
+  
+  /* Smooth Scrolling */
+  .gjs-block-categories,
+  .gjs-blocks-c {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Focus States */
+  .gjs-pn-btn:focus-visible,
+  .gjs-select:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+  }

@@ -1,0 +1,1 @@
+importScripts('https://cdn-staging.letsnotify.in/ServiceWorker.js');
